@@ -1,0 +1,36 @@
+<!-- 내부 스크립트: 웹 문서에서 script 태그와 scrip 태그를 사용하여 자바스크립트 소스만 모아 두는 소스이다.
+웹 문서의 모든 곳에 위치할 수 있고 삽입된 위치에서 바로 스크립트가 실행된다.
+한 문서 안에 여러 개의 script태그를 사용할 수 있다.
+문서에 있는 버튼을 클릭했을 때 실행하는 소스이거나 웹 문서 내용을 변경하는 소스라면 웹 문서가 모두 로딩된 다음에 실행해야 하므로 script 소스는 웹 요소를 모두 로딩 후에 
+삽입되어야 한다. 그래서 대부분의 경우 웹 문서 내용이 끝나는 body태그 직전에 자바스크립트 소스를 삽입한다. -->
+
+<!--무작위로 문서의 배경색 바꾸기-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문서 안에 스크립트 작성</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <button><p>새로 고침해 보세요</p></button>
+  <script>
+    const button = document.querySelector("button");
+
+    function random(number) {
+      return Math.floor(Math.random() * number);
+    }
+
+    function bgChange() {
+      const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';   
+      document.body.style.backgroundColor = rndCol;
+    }
+
+    bgChange();
+    // button.addEventListener("click", bgChange);    버튼을 클릭했을 때만 바꾸어 주려면 윗줄의 코드를 지우고 옆의 코드를 적용시킨다.
+  </script>
+</body>
+</html>
