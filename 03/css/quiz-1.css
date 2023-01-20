@@ -1,8 +1,9 @@
 body {
   text-align: center;
+  background-color: #ffdac4;
 }
 
-#direction {
+#title {
   margin: 0;
   padding: 100px 0 0;
 }
