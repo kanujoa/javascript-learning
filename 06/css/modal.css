@@ -1,0 +1,65 @@
+button {
+  background-color: #06f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+#modal-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;      /* 여기까지 모달 박스의 위치 고정 */
+  background-color: rgba(0,0,0,0.6);
+  display: none;        /* 여기서부터 화면의 가운데에 모달 박스 배치 */
+  justify-content: center;
+  align-items: center;
+} 
+
+#modal-box.active {      /* 버튼을 클릭했을 때 화면에 표시되어야 하므로 화면에 보여 주는 스타일을 따로 만들었다. (.active라는 새로운 클래스 스타일로 따로 만들었다.)*/
+  display: flex;
+}
+
+#modal-contents {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+#modal-contents button {
+  background-color: #fff;
+  color: #ccc;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+h1 {
+  font-size: 2erm;
+  margin-bottom: 20px;
+}
+
+#profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#desc {
+  margin: 10px 20px;
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
