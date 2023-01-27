@@ -1,12 +1,17 @@
 #container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
+  width: 500px;
   text-align: center;
   box-sizing: border-box;
 }
 
 #title {
   font-size: 35px;
-  margin: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 #description {
@@ -15,17 +20,20 @@
 }
 
 form input {
-  width: 30%;
-  padding: 20px;
+  font-size: 20px;
   margin: 5px;
+  padding: 20px;
+  text-align: center;
+  width: 89%;
 }
 
 button {
-  width: 32.5%;
   margin: 5px;
   padding: 20px;
   font-size: 20px;
-  border: 1px solid #222;
+  border: 0;
+  background-color: aquamarine;
+  box-shadow: 0 3px 3px 0;
 }
 
 button:hover {
@@ -45,8 +53,7 @@ button:hover {
 }
 
 #result-box span {
-  position: relative;
   font-size: 40px;
   top: 20%;
+  position: relative;
 }
-
