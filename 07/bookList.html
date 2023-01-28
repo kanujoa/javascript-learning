@@ -8,6 +8,22 @@
   <link rel="stylesheet" href="css/bookList.css">
 </head>
 <body>
+  <div id="container">
+    <h1>BOOK LIST</h1>
+    <form>
+      <div id="first">     <!--애초에 div가 아닌 ul, li로 작성하면 display:block으로 제목 영역과 저자 영역을 떼어주는 번거로운 작업을 하지 않아도 된다.-->
+        <label><b>제 목</b></label>
+        <input id="title" type="text">
+      </div>
+      <div id="second">
+        <label><b>저 자</b></label>
+        <input id="author" type="text">
+      </div>
+    </form>
+    <button id="cancel">취소하기</button>     <!--button도 form에 포함시키고 후에 js에서 기본 동작을 막는 코드를 써도 된다.-->
+    <button id="save">저장하기</button>
+    <div id="books"></div>
+  </div>
   <script src="js/bookList.js"></script>
 </body>
 </html>

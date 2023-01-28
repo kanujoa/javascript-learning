@@ -1,0 +1,65 @@
+#container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#first {
+  display: block;
+  margin-top: 50px;
+}
+
+#first, #second {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  width: 400px;
+  height: 25px;
+  position: relative;
+}
+
+button {
+  width: 130px;
+  height: 30px;
+  background-color: 0;
+  position: relative;
+  left: 53px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#save {
+  left: 194px;
+}
+
+#books {
+  margin-top: 80px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px dashed gray;
+  margin-top: 20px;
+  height: 40px;
+}
+
+#book-info {
+  position: relative;
+  font-weight: 600;
+}
+
+#remove {
+  position: relative;
+  left: 365px;
+  bottom: 26px;
+  border: 0;
+  background-color: aliceblue;
+  font-weight: 600;
+  cursor: pointer;
+}
+

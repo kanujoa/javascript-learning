@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bookList-sol.css">
+</head>
+<body>
+  <h1>Book List</h1>
+  <form>
+    <ul id="bookInfo">
+      <li>
+        <label for="title">제 목</label>
+        <input type="text" id="title">
+      </li>
+      <li>
+        <label for="author">저 자</label>
+        <input type="text" id="author">
+      </li>
+    </ul>
+    <button type="reset">취소하기</button>     <!--button의 type으로 reset을 써주면 버튼을 눌렀을 때 자동으로 값이 입력란에서 지워진다.-->
+    <button id="save">저장하기</button>
+  </form>
+
+  <ul id="bookList"></ul>
+
+  <script src="js/bookList-sol.js"></script>
+</body>
+</html>
