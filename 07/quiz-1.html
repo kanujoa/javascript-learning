@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>참가자 명단</title>
+  <link rel="stylesheet" href="css/quiz-1.css">
+</head>
+<body>
+  <div id="participant_list">
+    <h1>참가자 명단</h1>
+    <form id="userInput">
+      <ul>
+        <li>
+          <label for="name"><b>이 름</b></label>
+          <input type="text" id="name">
+        </li>
+        <li>
+          <label for="major"><b>전 공</b></label>
+          <input type="text" id="major">
+        </li>
+      </ul>
+      <button id="register"><b>등록하기</b></button>
+    </form>
+    <table style="border:1px solid black;">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>전공</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script src="js/quiz-1.js"></script>
+</body>
+</html>
