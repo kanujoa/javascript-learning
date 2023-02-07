@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내가 살아온 시간</title>
+  <link rel="stylesheet" href="css/quiz-1.css">
+</head>
+<body>
+  <div id="container">
+    <h1>내가 살아온 시간</h1>
+    <form>
+      <input type="text" id="year" name="year" maxlength="4">
+      <span class="text">년</span>
+      <input type="text" id="month" name="month" maxlength="2">
+      <span class="text">월</span>
+      <input type="text" id="day" name="day" maxlength="2">
+      <span class="text">일</span>
+      <button>계산</button>
+    </form>
+    <div id="result_box">
+      <span id="current"></span>
+      <span id="passed_days"></span>
+      <span id="passed_hr"></span>
+    </div>
+  </div>
+  <script src="js/quiz-1.js"></script>
+</body>
+</html>
