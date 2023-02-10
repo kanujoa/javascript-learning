@@ -1,0 +1,21 @@
+#container {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+#apply {
+  list-style: none;
+  padding: 20px 0 40px 20px;
+  border-bottom: 1px dashed gray;
+  margin: 0;
+}
+
+#final_apply {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 0 20px; 
+}
+
+li {
+  margin-bottom: 10px;
+}
