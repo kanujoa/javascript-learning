@@ -1,0 +1,40 @@
+#container {
+  width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  margin: 70px 0;
+  font-size: 40px;
+}
+
+#userInput {
+  font-size: 20px;
+  position: relative;
+}
+
+input {
+  width: 80px;
+  height: 40px;
+  margin: 0 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+button {
+  font-size: 15px;
+  width: 80px;
+  height: 40px;
+}
+
+#result {
+  width: 650px;
+  height: 45px;
+  border: 3px solid gray;
+  position: relative;
+  top: 80px;
+  background-color: #ebebeb;
+  font-size: 20px;
+  line-height: 2;
+}
