@@ -1,0 +1,20 @@
+#container {
+  width: 500px;
+  margin: 20px auto;
+}
+
+table {
+  width: 300px;
+  height: 60px;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+  font-size: 25px;
+  border: 1px solid gray;
+}
+
+td:last-child {
+  width: 60px;
+}
