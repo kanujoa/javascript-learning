@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>throw 문으로 오류 메시지 만들기</title>
+</head>
+<body>
+  <script>
+    let json = '{"grade" : 3, "age" : 25}';
+
+    try {
+      let user = JSON.parse(json);     // 객체로 바꾸기
+      if (!user.name) {    // user 객체에 name 프로퍼티가 존재하지 않는다면
+        // throw "사용자 이름이 없습니다.";     // "사용자 이름이 없습니다." 를 콘솔창에 띄운다.
+        throw new Error("사용자 이름이 없습니다.");     // Error 객체를 사용해서 에러 메시지 생성도 가능하다. Error 객체의 name은 Error가 되고 message는 소괄호 안의 내용이 된다.
+      }
+    } catch (err) {
+      console.error(err);     // console.log 가 아닌 console.error를 해야 빨간색으로 에러 메시지가 나온다.
+      console.error(`error name : ${err.name}`);
+      console.error(`error message : ${err.message}`);
+    }
+  </script>
+</body>
+</html>

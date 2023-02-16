@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예외 처리</title>
+</head>
+<body>
+  <h1>예외 처리를 적용한 프로그램</h1>
+  <script>
+    // try {
+    //   console.log("시작");
+    //   add();
+    //   console.log("실행 중...");
+    // } catch(err) {
+    //   console.log(`오류 발생 : ${err}`);
+    // }
+
+    // console.log("끝");
+
+    // try {
+    //   console.log("시작");
+    //   add();
+    //   conosle.log("실행 중...");
+    // } catch(error) {
+    //   console.error(`오류 발생 : ${error}`);     --> 빨간색을 표시되므로 일반 메시지와 구분된다.
+    // }
+
+    // console.log("끝");
+
+    try {
+      console.log("시작");
+      add();
+      console.log("실행 중...");
+    } catch(err) {
+      console.error(`오류 발생 : ${err}`);
+      console.error(`오류 발생 : ${err.name}`);      // 오류의 이름 (error 객체의 name 프로퍼티 사용)
+      console.error(`오류 발생 : ${err.message}`);     // 오류 메시지 (error 객체의 message 프로퍼티 사용)
+    }
+
+    console.log("끝");
+  </script>
+</body>
+</html>
