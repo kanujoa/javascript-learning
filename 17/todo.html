@@ -4,17 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>오늘의 할 일</title>
+  <title>오늘 할 일</title>
   <link rel="stylesheet" href="css/todo.css">
 </head>
 <body>
   <div id="container">
     <h1>오늘의 할 일</h1>
     <form>
-      <input type="text" placeholder="할 일을 입력하세요">
-      <button id="add"><b>추가</b></button>
+      <input placeholder="할 일을 입력하세요" required>
+      <button id="add">추가</button>
     </form>
-    <ul id="to_do_list"></ul>
+    <ul id="todo-list">
+    </ul>
   </div>
   <script src="js/todo.js"></script>
 </body>

@@ -5,62 +5,59 @@
 }
 
 h1 {
-  margin: 80px 0;
-  font-size: 45px;
+  font-size: 43px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+form {
+  padding: 50px 0;
 }
 
 input {
-  width: 380px;
-  height: 35px;
-  font-size: 20px;
-  border: 1px solid gray;
-  border-right: none; 
+  width: 500px;
+  height: 45px;
+  font-size: 23px;
   position: relative;
+  padding-left: 10px;
 }
 
 #add {
-  width: 45px;
-  height: 39px;
-  border: 1px solid gray;
-  font-size: 15px;
+  height: 50px;
+  width: 80px;
+  font-size: 23px;
   position: relative;
-  right: 5.5px;
-  bottom: 0.5px;
+  right: 6px;
+  line-height: 1;
 }
 
-ul {
+.todo {
   list-style: none;
   padding: 0;
+  width: 593.625px;
   position: relative;
-  top: 55px;
-  width: 425px;
+  margin: 10px 0;
+}
+
+li {
+  display: inline-block;
+  width: 458px;
+  border-bottom: 1px dashed gray;
+  padding-bottom: 15px;
+  font-size: 23px;
   text-align: center;
 }
 
-li { 
-  border-bottom: 1px dashed gray;  
+.complete, .remove {
+  font-size: 17px;
+  width: 53px;
+  height: 35px;
 }
 
-p {
-  display: inline-block;
-  font-size: 20px;
-  margin: 0;
+.complete {
+  margin-left: 10px;
 }
 
-.complete_button {
-  margin-left: 50px;
-}
-
-.complete_button, .remove_button {
-  padding: 0;
-  font-weight: 700;
-  font-size: 25px;
-  height: 40px;
-  background-color: white;
-  border: none;
-}
-
-.completed {
-  text-decoration: line-through;
-  color: gray;
+.remove {
+  margin-left: 5px;
 }
