@@ -61,3 +61,9 @@ li {
 .remove {
   margin-left: 5px;
 }
+
+.completed-todo {
+  color: gray;
+  text-decoration: line-through;
+  opacity: 70%;
+}
