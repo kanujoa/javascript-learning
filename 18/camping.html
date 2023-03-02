@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>지도에 여러 개의 마커 표시하기</title>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전국 캠핑장 현황</title>
 </head>
 <body>
-  <h1 style="text-align: center;">마커 클러스터러</h1>
+  <h1>전국 캠핑장 현황</h1>
+
   <div id="map" style="width:100%;height:550px;"></div>
   <!--아래에서 볼 수 있듯이 &libraries=clusterer를 적어주어야 clusterer.addMarkers(markers)를 정상적으로 실행 가능하다.-->
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b462c4a67d9a329454310a620528dcc9&libraries=clusterer"></script>
@@ -29,41 +31,30 @@
         minLevel: 10     // 클러스터링할 최소 지도 레벨
     });
     
-    // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
-    var positions = [
-        {
-            content: '<div style="padding:5px; font-size:0/9rem;">이지스퍼블리싱</div>', 
-            latlng: new kakao.maps.LatLng(37.55684, 126.91404)
-        },
-        {
-            content: '<div style="padding:5px; font-size:0.9rem;">테스트1</div>', 
-            latlng: new kakao.maps.LatLng(37.55483, 126.91302)
-        },
-        {
-            content: '<div style="padding:5px; font-size:0.9rem;">테스트2</div>', 
-            latlng: new kakao.maps.LatLng(37.55483, 126.91276)
-        },
-        {
-            content: '<div style="padding:5px; font-size:0.9rem;">테스트3</div>',
-            latlng: new kakao.maps.LatLng(37.55744, 126.91860)
-        }
-    ];
+    // 서버에서 가져오기 (numOfRows 부분을 10이 아닌 291로 설정하였다. 10으로 설정하면 10개밖에 안나옴.)
+    const url = "http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/basedList?ServiceKey=%2BzFD1RXtNbexeNbl0NR8hHKFjInlevLHumt%2FAZtZ8iAo9CSiEER8iQ3LZ6GAA5z%2F087%2BwuDeadPuNRQK7nTXlQ%3D%3D&numOfRows=291&MobileOS=ETC&MobileApp=TestApp&_type=json";
+    
+    fetch(url)
+    .then(result => result.json())     // json 파일을 객체로 변환
+    .then(json => {
+    // console.log(json);     // 우리가 찾는 캠핑장 정보는 body 안에 있는 items.item에 배열 형태로 저장되어 있다. (API에서는 기본적으로 10개씩 보여주도록 설정되어 있어서 10개의 자료가 저장되어 있다.)
+    const data = json.response.body.items.item;   
     
     // 마커들을 모아 놓을 변수
     var markers = [];
 
-    for (let i = 0; i < positions.length; i ++) {
+    for (let i = 0; i < data.length; i ++) {
         // 마커를 생성합니다
         var marker = new kakao.maps.Marker({
             map: map, // 마커를 표시할 지도
-            position: positions[i].latlng // 마커의 위치
+            position: new kakao.maps.LatLng(data[i].mapY, data[i].mapX) // 마커의 위치
         });
 
-        markers.push(marker);
- 
+        markers.push(marker);     // 배열에 마커를 추가합니다.
+  
         // 마커에 표시할 인포윈도우를 생성합니다 
         var infowindow = new kakao.maps.InfoWindow({
-            content: positions[i].content // 인포윈도우에 표시할 내용
+            content: data[i].facltNm // 인포윈도우에 표시할 내용
         });
 
         // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
@@ -88,6 +79,7 @@
     }
 
     clusterer.addMarkers(markers);
+    });     // fetch 끝 (기존의 모든 소스는 서버에서 자료를 가져온 후에 실행되어야 하므로 fetch문은 소스의 맨 마지막에서 끝나야 한다.)
   </script>
 </body>
 </html>
