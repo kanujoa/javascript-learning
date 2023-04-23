@@ -14,7 +14,7 @@ const myPet = function (name, age, eat, language) {
   this.language = language;
 
   this.canSpeak = function () {
-    const speak = language ? `${this.name} can speak.` : `${this.name} can't speak.`;
+    const speak = this.language ? `${this.name} can speak.` : `${this.name} can't speak.`;
     return speak;
   };
 };
@@ -33,6 +33,19 @@ const myPet = function (name, age, eat, language) {
 //     return speak;
 //   }
 // }
+
+// 프로토타입 메서드
+const myPet = function (name, age, eat, language) {
+  this.name = name;
+  this.age = age;
+  this.eat = eat;
+  this.language = language;
+};
+
+myPet.prototype.canSpeak = function () {
+  const speak = this.language ? `${this.name} can speak.` : `${this.name} can't speak.`;
+  return speak;
+};
 
 const pet1 = new myPet('Kanu', 7, ['fruit', 'grain', 'feed'], true);
 console.log(pet1);
